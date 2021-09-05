@@ -30,8 +30,11 @@ def task_2(input_list, prob, k):
     return result
 
 
-def test_2():
-    for _ in range(10000):
+def test_2(tests_count=10000):
+
+    errors = 0
+
+    for _ in range(tests_count):
 
         l, k = utils.get_input(max_size=256)
         p = [randint(0, 10) / 10 for _ in l]
@@ -58,6 +61,9 @@ def test_2():
                 print(f'k: {k}')
                 print(f'result: {result}')
                 print()
+                errors += 1
+
+    print(f'Failed tests: {errors}/{tests_count}')
 
 
 if __name__ == '__main__':
