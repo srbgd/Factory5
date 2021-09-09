@@ -1,6 +1,14 @@
 import utils
 
 
+# Complexity: O(k) because get_random uses Fisher–Yates shuffle algorithm for
+# drawwing a random number and stores only the "hat" part of the sequence.
+
+# Note: time complixity can be optimazite with increasing space complixity by
+# using Durstenfeld's version of the algorithm which performs swapping elemnts
+# in-place and stores the whole sequence
+
+
 def task_1(input_list, k):
     if k > len(input_list):
         raise utils.WrongTaskInput("List doesn't have k elements")
