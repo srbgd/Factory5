@@ -1,6 +1,13 @@
 from random import randint
 import utils
 
+# Complexity: O(N) because before applying algorithm from the first task
+# the list is splitted into 11 lists based on the probability of an element.
+
+# Note: time complixity can be optimazite with increasing space complixity by
+# using Durstenfeld's version of the algorithm which performs swapping elements
+# in-place and stores the whole sequence
+
 
 def task_2(input_list, prob, k):
     if k > len(input_list):
